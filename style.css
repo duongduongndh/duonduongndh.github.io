@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  align-items: center;
+  background-color: #05010e;
+  position: relative;
+}
+#tym2 div {
+  position: absolute;
+  background-size: cover;
+  animation: anni alternate 4s linear;
+}
+.heart {
+  padding-left: 450px;
+  padding-top: 100px;
+  animation: animate alternate 3s infinite;
+}
+
+.id {
+  position: relative;
+}
+.heartEl {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform: rotate(45deg);
+  background-color: rgb(186, 2, 33);
+  box-shadow: 0 0 50px rgb(186, 2, 33);
+}
+p {
+  color: aqua;
+  position: absolute;
+  top: 160px;
+  left: 500px;
+  line-height: 20px;
+  opacity: 0.6;
+  font-family: "Courier Prime", monospace;
+}
+.love {
+  font-family: "Courier Prime", monospace;
+  opacity: 0.7;
+  position: absolute;
+  left: 510px;
+  top: 135px;
+  color: aquamarine;
+}
+
+.heartEl::before {
+  content: "I";
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  left: -50%;
+  top: 0;
+  transform: rotate(45deg);
+  background-color: rgb(186, 2, 33);
+
+  box-shadow: 0 0 50px rgb(186, 2, 33);
+}
+.heartEl::after {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  left: 0;
+  top: -50%;
+  transform: rotate(45deg);
+  background-color: rgb(186, 2, 33);
+
+  box-shadow: 0 0 50px rgb(186, 2, 33);
+}
+@keyframes animate {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* =========================== */
+span {
+  pointer-events: none;
+  position: absolute;
+  background-size: cover;
+  /* transform: translate(-100px, -100px); */
+  animation: anime alternate 4s linear;
+}
+
+@keyframes anni {
+  0% {
+    opacity: 1;
+    transform: translate(10px, 19px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0px, -1130px);
+  }
+}
+@keyframes anime {
+  0% {
+    transform: translate(10px, -10px);
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(350px, -950px);
+  }
+}
+/* @keyframes anime {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(35px, 90px);
+  }
+} */
+@media screen and (max-width: 46.1875em) {
+  .heart {
+    padding-left: 100px;
+    padding-top: 160px;
+    animation: animate alternate 3s infinite;
+  }
+  p {
+    color: aqua;
+    position: absolute;
+    top: 200px;
+    left: 156px;
+    line-height: 20px;
+    opacity: 0.6;
+    animation: animate alternate 3s infinite;
+    font-family: "Courier Prime", monospace;
+  }
+  @keyframes animate {
+    0% {
+      transform: scale(0.6);
+    }
+    100% {
+      transform: scale(1.1);
+    }
+  }
+}
